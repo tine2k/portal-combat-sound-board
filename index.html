@@ -27,8 +27,8 @@
 	</script>
 
 	<script>
-		function play(element, url) {
-      let audio = new Audio(url);
+		function play(element, name) {
+      let audio = new Audio('https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/' + name + '.mp3');
       audio.addEventListener('play', () => element.disabled = true);
       audio.addEventListener('ended', () => element.disabled = false);
       audio.play();
@@ -39,23 +39,19 @@
 		<div class="board">
 			<h1>Portal Combat Sound Board</h1>
 
-      <button type="button" class="btn btn-primary btn-lg"
-        onClick="play(this,'https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/standup.mp3')">
+      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'standup')">
         Standup
       </button>
 
-      <button type="button" class="btn btn-primary btn-lg"
-        onClick="play(this,'https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/review.mp3')">
+      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'review3')">
         Review
       </button>
 
-      <button type="button" class="btn btn-primary btn-lg"
-        onClick="play(this,'https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/estimation.mp3')">
+      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'estimation')">
         Estimation
       </button>
 
-      <button type="button" class="btn btn-primary btn-lg"
-        onClick="play(this,'https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/kaffee.mp3')">
+      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'kaffee')">
         Kaffee
       </button>
     </div>
