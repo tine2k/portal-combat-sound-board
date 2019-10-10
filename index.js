@@ -1,7 +1,3 @@
-// Import stylesheets
-import './style.css';
-
-// Write TypeScript code!
 const play = function(name) {
   let audio = new Audio('https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/' + name + '.mp3');
   audio.addEventListener('play', () => document.getElementById(name).disabled = true);
