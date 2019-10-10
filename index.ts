@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import * as later from 'later';
+import { CronJob } from 'cron';
 
 // Write TypeScript code!
 const play = function(name) {
@@ -17,5 +17,4 @@ document.getElementById('kaffee').onclick = () => play('kaffee');
 document.getElementById('grooming').onclick = () => play('grooming');
 
 console.log('scheduling job...');
-var textSched = this.later.parse.text('every 10 seconds');
-var timer2 = later.setInterval(() => play('standup'), textSched);
+new CronJob('30 9 * * *', () => play('standup'), null, true, 'Europe/Vienna');
