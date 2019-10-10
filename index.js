@@ -1,6 +1,5 @@
 // Import stylesheets
 import './style.css';
-import { CronJob } from 'cron';
 
 // Write TypeScript code!
 const play = function(name) {
@@ -17,4 +16,4 @@ document.getElementById('kaffee').onclick = () => play('kaffee');
 document.getElementById('grooming').onclick = () => play('grooming');
 
 console.log('scheduling job...');
-new CronJob('30 9 * * *', () => play('standup'), null, true, 'Europe/Vienna');
+//new CronJob('30 9 * * *', () => play('standup'), null, true, 'Europe/Vienna');
