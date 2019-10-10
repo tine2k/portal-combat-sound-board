@@ -12,7 +12,7 @@ document.getElementById('kaffee').onclick = () => play('kaffee');
 document.getElementById('grooming').onclick = () => play('grooming');
 
 later.date.localTime();
-var cronDef = 'at 11:43pm every weekday';
+var cronDef = 'at 11:45pm every weekday';
 console.log('scheduling job@' + cronDef);
 var scheduler = later.parse.text(cronDef);
 later.setInterval(() => play('standup'), scheduler);
