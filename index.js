@@ -12,4 +12,6 @@ document.getElementById('kaffee').onclick = () => play('kaffee');
 document.getElementById('grooming').onclick = () => play('grooming');
 
 console.log('scheduling job...');
-//new CronJob('30 9 * * *', () => play('standup'), null, true, 'Europe/Vienna');
+later.date.localTime();
+var scheduler = later.parse.cron('36 23 * * *');
+later.setInterval(() => play('standup'), scheduler);
