@@ -1,4 +1,5 @@
 const play = function(name) {
+  console.log(name);
   let audio = new Audio('https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/' + name + '.mp3');
   audio.addEventListener('play', () => document.getElementById(name).disabled = true);
   audio.addEventListener('ended', () => document.getElementById(name).disabled = false);
@@ -12,6 +13,6 @@ document.getElementById('kaffee').onclick = () => play('kaffee');
 document.getElementById('grooming').onclick = () => play('grooming');
 
 console.log('scheduling job...');
-var scheduler = later.parse.text('at 11:41pm every weekday');
+var scheduler = later.parse.text('at 11:43pm every weekday');
 later.date.localTime();
 later.setInterval(() => play('standup'), scheduler);
