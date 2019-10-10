@@ -12,6 +12,6 @@ document.getElementById('kaffee').onclick = () => play('kaffee');
 document.getElementById('grooming').onclick = () => play('grooming');
 
 console.log('scheduling job...');
-var scheduler = later.parse.cron('36 23 * * *');
+var scheduler = later.parse.cron('38 23 * * *');
 later.date.localTime();
 later.setInterval(() => play('standup'), scheduler);
