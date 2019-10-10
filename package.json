@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@types/later": "^1.2.5",
     "later": "^1.2.0"
   }
 }
