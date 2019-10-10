@@ -14,54 +14,27 @@
 </head>
 
 <body>
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/later/1.2.0/later-core.min.js" crossorigin="anonymous">
-	</script>
-  
-	<script>
-		function play(element, name) {
-      let audio = new Audio('https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/' + name + '.mp3');
-      audio.addEventListener('play', () => element.disabled = true);
-      audio.addEventListener('ended', () => element.disabled = false);
-      audio.play();
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-    alert("Ready!");
-}, false);
-	</script>
-
 	<div class="container">
 		<div class="board">
 			<h1>Portal Combat Sound Board</h1>
 
-      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'standup')">
+      <button type="button" id="standup" class="btn btn-primary btn-lg" onClick="play('standup')">
         Standup
       </button>
 
-      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'review')">
+      <button type="button" id="review" class="btn btn-primary btn-lg" onClick="play('review')">
         Review
       </button>
 
-      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'estimation')">
+      <button type="button" id="estimation" class="btn btn-primary btn-lg" onClick="play('estimation')">
         Estimation
       </button>
 
-      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'kaffee')">
+      <button type="button" id="kaffee" class="btn btn-primary btn-lg" onClick="play('kaffee')">
         Kaffee
       </button>
       
-      <button type="button" class="btn btn-primary btn-lg" onClick="play(this, 'grooming')">
+      <button type="button" id="grooming" class="btn btn-primary btn-lg" onClick="play('grooming')">
         Grooming
       </button>
     </div>
