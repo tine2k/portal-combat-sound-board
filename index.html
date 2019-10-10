@@ -28,11 +28,14 @@
 
 	<script>
 		function play(element, url) {
-      console.log('play: ' + url);
-      new Audio(url).play();
+      let audio = new Audio(url);
+      audio.addEventListener('play', () => element.disabled = true);
+      audio.addEventListener('ended', () => element.disabled = false);
+      audio.play();
     }
 	</script>
-
+  
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 	<h1>Portal Combat Sound Board</h1>
 
 	<button type="button" class="btn btn-primary btn-lg"
@@ -44,6 +47,7 @@
   onClick="play(this,'https://raw.githubusercontent.com/tine2k/portal-combat-sound-board/master/review.mp3')">
     Review
   </button>
+</div>
 
 </body>
 
