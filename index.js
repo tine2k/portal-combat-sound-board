@@ -12,7 +12,7 @@ document.getElementById('estimation').onclick = () => play('estimation');
 document.getElementById('kaffee').onclick = () => play('kaffee');
 document.getElementById('grooming').onclick = () => play('grooming');
 
-console.log('scheduling job...');
+console.log('scheduling job... x');
 var scheduler = later.parse.text('at 11:43pm every weekday');
 later.date.localTime();
 later.setInterval(() => play('standup'), scheduler);
